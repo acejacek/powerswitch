@@ -13,7 +13,7 @@ def setRelay(relay_pin, gpio_mode=GPIO.BOARD, power_on = GPIO.HIGH, switch = Fal
 
     if debug:
         print "Board mode: " + str(gpio_mode)
-        print "PIR pin:    " + str(relay_pin)
+        print "Relay pin:  " + str(relay_pin)
 
     try:
         GPIO.setwarnings(False)
@@ -34,7 +34,7 @@ def setRelay(relay_pin, gpio_mode=GPIO.BOARD, power_on = GPIO.HIGH, switch = Fal
         GPIO.output(relay_pin, power_on)
 
     except:
-        print "Something wrong"
+        print "ERROR: Something wrong with GPIO."
         GPIO.cleanup()
 
     finally:
