@@ -71,7 +71,7 @@ Options:
 if __name__ == "__main__":
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"v01sd:p:m:",["verbose","debug","relay-pin=","gpio-mode=","power-on","power-off","switch","delay"])
+        opts, args = getopt.getopt(sys.argv[1:],"v01sd:p:m:",["verbose","debug","relay-pin=","gpio-mode=","power-on","power-off","switch","delay="])
 
     except getopt.GetoptError:
         helper()
